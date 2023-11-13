@@ -2,7 +2,7 @@
 
 ## Integrantes (Comision de los Viernes):
 - **Gil Eitan Steven** - EitanSteven2002@hotmail.com
-- **Palavecino, Mariana Ayelen** – marianapalavecino5@gmail.com
+- **Palavecino, Mariana Ayelen** – marianapalavecino5@gmail.com (No participó, se bajó de la materia).
 
 ## Documentacion de los endpoints de la API
 
@@ -22,7 +22,15 @@ Siendo "ID", un parametro numerico de indice que traera un solo elemento.
 
 - Web2Tp/api/libros/ID
 
-Como ultimo GET, este traera todos los libros del autor deseado, siendo "ID", el id del autor del que se quiere traer los libros.
+Este traera todos los libros del autor deseado, siendo "ID", el id del autor del que se quiere traer los libros.
+
+- Web2tp3/api/autores&order=ORDER
+- Web2tp3/api/autores&order=ORDER&sort=SORT
+
+- Web2tp3/api/libros&order=ORDER
+- Web2tp3/api/libros&order=ORDER&sort=SORT
+
+Estos GETS, tanto para libros como autores, pueden ir con unas variables adicionales opcionales, siendo ORDER, uno de los campos por los cuales ordenar, como el Nombre_Autor, y si usas ORDER, puedes utilizar SORT, que puede recibir como variable valida "ASC", lo que traera los resultados de forma ascendente, o "DESC", que los traera de forma descendente.
 
 ## POST:
 
@@ -46,6 +54,8 @@ Siendo en los libros, "Stock", un valor booleano diferenciado con 0 y 1 para sab
     "Biografia": "Breve biografia del autor",
     "Estado": 1
 }
+
+NOTA: Las Keys de los objetos deben escribirse exactamente asi.
 
 Similar a los libros, en los autores, "Estado", es el valor booleano define si el autor permanece con vida en la actualidad o no.
 

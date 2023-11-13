@@ -45,7 +45,7 @@ class apiAutorController {
         $idAutor = $params[":ID"];
         $successBook = $this->librosModel->deleteLibroByAutor($idAutor);
         $success = $this->model->deleteAutor($idAutor);
-        if ($success & $successBook) {
+        if ($success) {
         $this->view->response("El Autor con el ID:$idAutor se borro exitosamente", 200);
         } else {
             $this->view->response("El Autor con el ID:$idAutor no existe, no se puede eliminar.", 404);

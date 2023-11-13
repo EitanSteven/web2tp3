@@ -65,7 +65,7 @@ class apiLibrosController {
         $success = $this->model->updateStock($originStock, $idLibro);
 
         if ($success) {
-            $this->view->response("Se cambio el estado del Autor:$idLibro", 200);
+            $this->view->response("Se cambio el Stock del libro con id:$idLibro", 200);
         } else {
             $this->view->response("No se pudo cambiar el estado", 500);
         }

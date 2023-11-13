@@ -64,13 +64,14 @@ class librosModel {
         }
         return $id;
     }
-    public function addLibro($ID_Autor, $tituloLibro, $generoLibro, $Stock) {
+    public function addLibro($Titulo, $Genero, $ID_Autor, $Stock) {
         $indice = $this->getLastId();
         $indice++;
-
+    
         $query = $this->db->prepare('INSERT INTO libros (ISBN, Titulo, Genero, ID_Autor, Stock) VALUES (?, ?, ?, ?, ?)');
-        $query->execute([$indice, $tituloLibro, $generoLibro, $ID_Autor, $Stock]);
+        $query->execute([$indice, $Titulo, $Genero, $ID_Autor, $Stock]);
         return $indice;
     }
+    
     
 }
