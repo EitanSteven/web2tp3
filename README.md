@@ -10,32 +10,32 @@ A continuacion se explicara la funcionalidad de los endpoints de la API de libro
 
 ## GET:
 
-- Web2Tp/api/libros
-- Web2Tp/api/autores
+- Web2tp3/api/libros
+- Web2tp3/api/autores
 
 Traen todos los libros y autores de la base de datos.
 
-- Web2Tp/api/libro/ID
-- Web2Tp/api/autor/ID
+- Web2tp3/api/libro/ID
+- Web2tp3/api/autor/ID
 
 Siendo "ID", un parametro numerico de indice que traera un solo elemento.
 
-- Web2Tp/api/libros/ID
+- Web2tp3/api/libros/ID
 
 Este traera todos los libros del autor deseado, siendo "ID", el id del autor del que se quiere traer los libros.
 
-- Web2tp3/api/autores&order=ORDER
-- Web2tp3/api/autores&order=ORDER&sort=SORT
+- Web2tp33/api/autores&order=ORDER
+- Web2tp33/api/autores&order=ORDER&sort=SORT
 
-- Web2tp3/api/libros&order=ORDER
-- Web2tp3/api/libros&order=ORDER&sort=SORT
+- Web2tp33/api/libros&order=ORDER
+- Web2tp33/api/libros&order=ORDER&sort=SORT
 
 Estos GETS, tanto para libros como autores, pueden ir con unas variables adicionales opcionales, siendo ORDER, uno de los campos por los cuales ordenar, como el Nombre_Autor, y si usas ORDER, puedes utilizar SORT, que puede recibir como variable valida "ASC", lo que traera los resultados de forma ascendente, o "DESC", que los traera de forma descendente.
 
 ## POST:
 
-- Web2Tp/api/libros
-- Web2Tp/api/autores
+- Web2tp3/api/libros
+- Web2tp3/api/autores
 
 Para realizar una insercion, en el body se debe enviar un objeto como los siguientes respectivamente:
 
@@ -61,15 +61,15 @@ Similar a los libros, en los autores, "Estado", es el valor booleano define si e
 
 ## PUT:
 
-- Web2Tp/api/libro/ID
-- Web2Tp/api/autor/ID
+- Web2tp3/api/libro/ID
+- Web2tp3/api/autor/ID
 
 Este edpoint espera que se le pase como ID, el autor o el libro que se desea editar, cambiando automaticamente el Stock o Estado por el contrario.
 
 ## DELETE:
 
-- Web2Tp/api/libro/ID
-- Web2Tp/api/autor/ID
+- Web2tp3/api/libro/ID
+- Web2tp3/api/autor/ID
 
 Por ultimo, estos endpoints esperan el ID del libro o autor que se desea eliminar, cabe aclarar, que eliminar un autor eliminara todos sus libros.
 
